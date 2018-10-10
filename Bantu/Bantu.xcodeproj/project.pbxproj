@@ -15,6 +15,8 @@
 		2F6FC33121660D5B004609AC /* AddDraft.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F6FC33021660D5B004609AC /* AddDraft.storyboard */; };
 		2F6FC33321660D68004609AC /* Draft.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F6FC33221660D68004609AC /* Draft.storyboard */; };
 		2F6FC33521660D76004609AC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F6FC33421660D76004609AC /* Home.storyboard */; };
+		2FA1BA29216DFD7900528619 /* DraftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1BA28216DFD7900528619 /* DraftViewController.swift */; };
+		2FA1BA2D216DFE1700528619 /* DraftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1BA2C216DFE1700528619 /* DraftCell.swift */; };
 		2FA5E329216B593A00EB375C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E328216B593A00EB375C /* RegisterViewController.swift */; };
 		2FA5E32D216B61B600EB375C /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E32C216B61B600EB375C /* PaddingTextField.swift */; };
 		2FA5E331216D9D2200EB375C /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E330216D9D2200EB375C /* UIButton.swift */; };
@@ -41,6 +43,8 @@
 		2F6FC33021660D5B004609AC /* AddDraft.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDraft.storyboard; sourceTree = "<group>"; };
 		2F6FC33221660D68004609AC /* Draft.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Draft.storyboard; sourceTree = "<group>"; };
 		2F6FC33421660D76004609AC /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		2FA1BA28216DFD7900528619 /* DraftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftViewController.swift; sourceTree = "<group>"; };
+		2FA1BA2C216DFE1700528619 /* DraftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftCell.swift; sourceTree = "<group>"; };
 		2FA5E328216B593A00EB375C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2FA5E32C216B61B600EB375C /* PaddingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
 		2FA5E330216D9D2200EB375C /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				2FE953CB216B45CA00258F32 /* HomeCell.swift */,
+				2FA1BA2C216DFE1700528619 /* DraftCell.swift */,
 				2FE953CD216B46B400258F32 /* Event.swift */,
 			);
 			path = Model;
@@ -143,6 +148,7 @@
 		2FA5E334216D9F5A00EB375C /* Draft */ = {
 			isa = PBXGroup;
 			children = (
+				2FA1BA28216DFD7900528619 /* DraftViewController.swift */,
 			);
 			name = Draft;
 			path = AddDraft;
@@ -318,7 +324,9 @@
 				2F6FC31F21660912004609AC /* AppDelegate.swift in Sources */,
 				2FA5E329216B593A00EB375C /* RegisterViewController.swift in Sources */,
 				2FA5E342216DCA0D00EB375C /* LogViewController.swift in Sources */,
+				2FA1BA2D216DFE1700528619 /* DraftCell.swift in Sources */,
 				2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */,
+				2FA1BA29216DFD7900528619 /* DraftViewController.swift in Sources */,
 				2FA5E331216D9D2200EB375C /* UIButton.swift in Sources */,
 				2FA5E32D216B61B600EB375C /* PaddingTextField.swift in Sources */,
 				2FA5E348216DE0C800EB375C /* LogInViewController.swift in Sources */,

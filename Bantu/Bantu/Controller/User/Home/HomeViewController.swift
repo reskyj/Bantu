@@ -9,10 +9,20 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    var eventImages = [UIImage(named: "dummy"), UIImage(named: "dummy")]
+    var eventTitles = ["1000 Guru Tangerang #TNT4", "1000 Guru Tangerang #TNT4"]
+    var dates = ["10 - 11 September 2018", "12 - 13 September 2018"]
+    var locations = ["Banten", "Jakarta"]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
+        
+        
         
     }
     
@@ -28,3 +38,27 @@ class HomeViewController: UIViewController {
     }
 }
 
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return eventTitles.count
+
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeCell
+        
+        cell.eventImageView.image = eventImages[indexPath.row]
+        cell.eventTitleLabel.text = eventTitles[indexPath.row]
+        cell.dateLabel.text = dates[indexPath.row]
+        cell.locationLabel.text = locations[indexPath.row]
+    
+        return cell
+    }
+}
+
+extension UIImageView {
+    func setRounded() {
+        self.layer.cornerRadius = 10
+        self.clipsToBounds = true
+    }
+}
