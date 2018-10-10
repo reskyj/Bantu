@@ -9,6 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Log-->
+        <scene sceneID="Hxn-4X-OeM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Log" id="tDm-4h-W9X" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcT-gW-eZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="800"/>
+        </scene>
         <!--Event-->
         <scene sceneID="Uuw-bx-2AF">
             <objects>
@@ -87,6 +95,9 @@
                     <tabBarItem key="tabBarItem" title="" image="icons8-calendar" id="b9v-G0-w3h"/>
                     <navigationItem key="navigationItem" title="Event" id="4BF-5n-aIL"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="tDm-4h-W9X" kind="showDetail" identifier="homeToLog" id="KBM-Bo-YQp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKZ-CG-pOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sb-2x-97R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752.8" y="1039.6551724137933"/>
+            <point key="canvasLocation" x="2510" y="1054"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fyg-Ha-btU">

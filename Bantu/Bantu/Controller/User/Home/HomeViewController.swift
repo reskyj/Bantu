@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc func profileTapped() {
-        
+        performSegue(withIdentifier: "homeToLog", sender: nil)
     }
 }
 

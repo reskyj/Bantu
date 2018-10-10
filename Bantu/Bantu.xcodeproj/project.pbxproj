@@ -20,6 +20,11 @@
 		2FA5E331216D9D2200EB375C /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E330216D9D2200EB375C /* UIButton.swift */; };
 		2FA5E338216DA01400EB375C /* AddDraftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E337216DA01400EB375C /* AddDraftViewController.swift */; };
 		2FA5E33A216DA05400EB375C /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA5E339216DA05400EB375C /* Admin.storyboard */; };
+		2FA5E340216DB52C00EB375C /* Log.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA5E33F216DB52C00EB375C /* Log.storyboard */; };
+		2FA5E342216DCA0D00EB375C /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E341216DCA0D00EB375C /* LogViewController.swift */; };
+		2FA5E344216DD83100EB375C /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E343216DD83100EB375C /* UITextField.swift */; };
+		2FA5E346216DDCDC00EB375C /* RegisteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */; };
+		2FA5E348216DE0C800EB375C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E347216DE0C800EB375C /* LogInViewController.swift */; };
 		2FE953C9216B377800258F32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953C8216B377800258F32 /* HomeViewController.swift */; };
 		2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953CB216B45CA00258F32 /* HomeCell.swift */; };
 		2FE953CE216B46B400258F32 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953CD216B46B400258F32 /* Event.swift */; };
@@ -41,6 +46,11 @@
 		2FA5E330216D9D2200EB375C /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		2FA5E337216DA01400EB375C /* AddDraftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDraftViewController.swift; sourceTree = "<group>"; };
 		2FA5E339216DA05400EB375C /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
+		2FA5E33F216DB52C00EB375C /* Log.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Log.storyboard; sourceTree = "<group>"; };
+		2FA5E341216DCA0D00EB375C /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		2FA5E343216DD83100EB375C /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteringViewController.swift; sourceTree = "<group>"; };
+		2FA5E347216DE0C800EB375C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		2FE953C8216B377800258F32 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FE953CB216B45CA00258F32 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		2FE953CD216B46B400258F32 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -107,6 +117,7 @@
 			children = (
 				2FA5E32C216B61B600EB375C /* PaddingTextField.swift */,
 				2FA5E330216D9D2200EB375C /* UIButton.swift */,
+				2FA5E343216DD83100EB375C /* UITextField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -159,6 +170,7 @@
 		2FA5E33D216DA0FE00EB375C /* User */ = {
 			isa = PBXGroup;
 			children = (
+				2FA5E33F216DB52C00EB375C /* Log.storyboard */,
 				2F6FC32221660913004609AC /* Main.storyboard */,
 				2F6FC33421660D76004609AC /* Home.storyboard */,
 				2F6FC33021660D5B004609AC /* AddDraft.storyboard */,
@@ -167,9 +179,20 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		2FA5E33E216DB4CE00EB375C /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				2FA5E341216DCA0D00EB375C /* LogViewController.swift */,
+				2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */,
+				2FA5E347216DE0C800EB375C /* LogInViewController.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
 		2FE953CA216B379400258F32 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2FA5E33E216DB4CE00EB375C /* Log */,
 				2FA5E335216D9F7400EB375C /* User */,
 			);
 			path = Controller;
@@ -258,6 +281,7 @@
 				2F6FC33521660D76004609AC /* Home.storyboard in Resources */,
 				2F6FC32621660913004609AC /* Assets.xcassets in Resources */,
 				2F6FC32421660913004609AC /* Main.storyboard in Resources */,
+				2FA5E340216DB52C00EB375C /* Log.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,13 +314,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA5E338216DA01400EB375C /* AddDraftViewController.swift in Sources */,
+				2FA5E344216DD83100EB375C /* UITextField.swift in Sources */,
 				2F6FC31F21660912004609AC /* AppDelegate.swift in Sources */,
 				2FA5E329216B593A00EB375C /* RegisterViewController.swift in Sources */,
+				2FA5E342216DCA0D00EB375C /* LogViewController.swift in Sources */,
 				2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */,
 				2FA5E331216D9D2200EB375C /* UIButton.swift in Sources */,
 				2FA5E32D216B61B600EB375C /* PaddingTextField.swift in Sources */,
+				2FA5E348216DE0C800EB375C /* LogInViewController.swift in Sources */,
 				2FE953C9216B377800258F32 /* HomeViewController.swift in Sources */,
 				2FE953CE216B46B400258F32 /* Event.swift in Sources */,
+				2FA5E346216DDCDC00EB375C /* RegisteringViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
