@@ -6,32 +6,77 @@
 //  Copyright © 2018 Resky Javieri. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class HomeViewController: UIViewController {
     
+    
     @IBOutlet weak var tableView: UITableView!
-    var eventImages = [UIImage(named: "dummy"), UIImage(named: "dummy")]
-    var eventTitles = ["1000 Guru Tangerang #TNT4", "1000 Guru Tangerang #TNT4"]
-    var dates = ["10 - 11 September 2018", "12 - 13 September 2018"]
-    var locations = ["Banten", "Jakarta"]
+    
+    var event = [Event]()
+    var selectedIndex: Int = 0
+    var search = [String]()
+    var searching = false
     
     
-
+//    var eventImages = [UIImage(named: "dummy"), UIImage(named: "dummy")]
+//    var eventTitles = ["Gior", "Tanri"]
+//    var filteredEventTitles = [String]()
+//    var dates = ["10 - 11 September 2018", "12 - 13 September 2018"]
+//    var locations = ["Banten", "Jakarta"]
+//
+    
+    
+//    @IBAction func shareButtonTapped(_ sender: Any) {
+//        let buttonPosition : CGPoint = (sender as AnyObject).convert(CGPoint.zero, to: self.tableView)
+//        let indexPath = self.tableView.indexPathForRow(at: buttonPosition)
+//        let sharedTitle = [eventTitles[(indexPath?.last)!]]
+//
+//        let activityController = UIActivityViewController(activityItems: sharedTitle, applicationActivities: nil)
+//
+//        self.present(activityController, animated: true, completion: nil)
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
+        self.resultController.tableView.dataSource = self
+        self.resultController.tableView.delegate = self
         
-        
+        event.append(Event(image: UIImage(named: "dummy")!, title: "Gior", date: "10 - 11 September 2018", location: "Banten"))
+        event.append(Event(image: UIImage(named: "dummy")!, title: "Tanri", date: "12 - 13 September 2018", location: "Jakarta"))
         
     }
     
+    var searchController: UISearchController!
+    var resultController = UITableViewController()
+    
     func setupNavBar() {
-        let searchController = UISearchController(searchResultsController: nil)
-        navigationItem.searchController = searchController
+//        self.searchController = UISearchController(searchResultsController: self.resultController)
+//        self.tableView.tableHeaderView = self.searchController.searchBar
+//        self.searchController.searchResultsUpdater = self
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"user-4"), style: .plain, target: self, action: #selector(profileTapped))
     }
+    func updateSearchResults(for searchController: UISearchController) {
+        //Filter through the event titles
+
+//
+//        self.filteredEventTitles = self.eventTitles.filter({ (eventTitle: String) -> Bool in
+//            if eventTitles.contains(self.searchController.searchBar.text!) {
+//                return true
+//            } else {
+//                return false
+//            }
+//        })
+        //Update the result of tableview
+//        self.resultController.tableView.reloadData()
+
+    }
+
+
+    
     
     @objc func profileTapped() {
         performSegue(withIdentifier: "homeToLog", sender: nil)
@@ -40,25 +85,62 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventTitles.count
+        if searching == true {
+            return search.count
+        } else {
+            return event.count
+        }
+        
 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeCell
+        if searching == true {
+//            cell.eventImageView.image = search[indexPath.row]
+//            cell.eventTitleLabel.text = search[indexPath.row]
+//            cell.dateLabel.text = search[indexPath.row]
+//            cell.locationLabel.text = search[indexPath.row]
+            
+            cell.eventImageView.image = UIImage(named: search[indexPath.row])
+            cell.eventTitleLabel.text = search[indexPath.row]
+            cell.dateLabel.text = search[indexPath.row]
+            cell.locationLabel.text = search[indexPath.row]
+            print("Data masuk")
+        } else {
+//            cell.eventTitleLabel.text = eventTitles[indexPath.row]
+//            cell.eventImageView.image = eventImages[indexPath.row]
+//            cell.dateLabel.text = dates[indexPath.row]
+//            cell.locationLabel.text = locations[indexPath.row]
+            cell.eventImageView.image = event[indexPath.row].image
+            cell.eventTitleLabel.text = "\(event[indexPath.row].title)"
+            cell.dateLabel.text = "\(event[indexPath.row].date)"
+            cell.locationLabel.text = "\(event[indexPath.row].location)"
+           
+        }
         
-        cell.eventImageView.image = eventImages[indexPath.row]
-        cell.eventTitleLabel.text = eventTitles[indexPath.row]
-        cell.dateLabel.text = dates[indexPath.row]
-        cell.locationLabel.text = locations[indexPath.row]
     
         return cell
     }
+    
 }
 
 extension UIImageView {
     func setRounded() {
         self.layer.cornerRadius = 10
         self.clipsToBounds = true
+    }
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        search = event.filter({$0.title.lowercased().contains(searchText.lowercased())})
+        searching = true
+        self.tableView.reloadData()
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.text = ""
+        self.tableView.reloadData()
     }
 }
