@@ -16,17 +16,8 @@ class HomeViewController: UIViewController {
     
     var event = [Event]()
     var selectedIndex: Int = 0
-    var search = [String]()
+    var search = [Event]()
     var searching = false
-    
-    
-//    var eventImages = [UIImage(named: "dummy"), UIImage(named: "dummy")]
-//    var eventTitles = ["Gior", "Tanri"]
-//    var filteredEventTitles = [String]()
-//    var dates = ["10 - 11 September 2018", "12 - 13 September 2018"]
-//    var locations = ["Banten", "Jakarta"]
-//
-    
     
 //    @IBAction func shareButtonTapped(_ sender: Any) {
 //        let buttonPosition : CGPoint = (sender as AnyObject).convert(CGPoint.zero, to: self.tableView)
@@ -97,21 +88,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeCell
         if searching == true {
-//            cell.eventImageView.image = search[indexPath.row]
-//            cell.eventTitleLabel.text = search[indexPath.row]
-//            cell.dateLabel.text = search[indexPath.row]
-//            cell.locationLabel.text = search[indexPath.row]
-            
-            cell.eventImageView.image = UIImage(named: search[indexPath.row])
-            cell.eventTitleLabel.text = search[indexPath.row]
-            cell.dateLabel.text = search[indexPath.row]
-            cell.locationLabel.text = search[indexPath.row]
+            cell.eventImageView.image = search[indexPath.row].image
+            cell.eventTitleLabel.text = "\(search[indexPath.row].title)"
+            cell.dateLabel.text = "\(search[indexPath.row].date)"
+            cell.locationLabel.text = "\(search[indexPath.row].location)"
             print("Data masuk")
         } else {
-//            cell.eventTitleLabel.text = eventTitles[indexPath.row]
-//            cell.eventImageView.image = eventImages[indexPath.row]
-//            cell.dateLabel.text = dates[indexPath.row]
-//            cell.locationLabel.text = locations[indexPath.row]
             cell.eventImageView.image = event[indexPath.row].image
             cell.eventTitleLabel.text = "\(event[indexPath.row].title)"
             cell.dateLabel.text = "\(event[indexPath.row].date)"
@@ -134,7 +116,10 @@ extension UIImageView {
 
 extension HomeViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        search = event.filter({$0.title.lowercased().contains(searchText.lowercased())})
+        search = event.filter({$0.title.lowercased().contains(searchText.lowercased())})
+        if searchText == ""{
+            search = event
+        }
         searching = true
         self.tableView.reloadData()
     }
