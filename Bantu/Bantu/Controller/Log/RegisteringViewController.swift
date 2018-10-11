@@ -18,6 +18,10 @@ class RegisteringViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
+    var fullName: String!
+    var phone: String!
+    var email: String!
+    var password: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,20 +38,56 @@ class RegisteringViewController: UIViewController {
     }
     
     func createNewUser(){
+        let hashedPassword: String = SHA1.hexString(from: self.password)!
         
+        let newUser = User(userId: 0, levelId: 2, fullName: self.fullName!, phone: self.phone, email: self.email, password: hashedPassword)
+        
+        UserServices.postUser(newUser: newUser) { (inserted) in
+            if (inserted == true){
+                DispatchQueue.main.async {
+                    self.createOkAlert(title: "Berhasil", message: "Akun anda sudah terdaftar di Bantu!"){
+                        // go back to profile page
+                    }
+                }
+            }
+            else{
+                DispatchQueue.main.async {
+                    self.createOkAlert(title: "Daftar Gagal", message: "Koneksi ke database sedang offline!") {}
+                }
+            }
+        }
+    }
+    
+    func checkEmailExist(){
+        let currEmail: String = self.emailTextField.text!
+        
+        UserServices.getUsers { (users) in
+            for singleUser in users{
+                if (currEmail == singleUser.email){
+                    DispatchQueue.main.async {
+                        self.createOkAlert(title: "Daftar Gagal", message: "Email sudah pernah terdaftar!"){}
+                    }
+                    return
+                }
+            }
+            self.createNewUser()
+        }
     }
     
     @IBAction func registerButtonClicked() {
         if (self.fullNameTextField.text == "" || self.phoneTextField.text == "" || self.emailTextField.text == "" || self.passwordTextField.text == "" || self.confirmPasswordTextField.text == ""){
-            self.createOkAlert(title: "Gagal Daftar", message: "Mohon isi semua field!"){}
+            self.createOkAlert(title: "Daftar Gagal", message: "Mohon isi semua field!"){}
         }
         else if (self.passwordTextField.text != self.confirmPasswordTextField.text){
             self.createOkAlert(title: "Daftar Gagal", message: "Konfirmasi kata sandi tidak sesuai!"){}
         }
         else{
-            self.createNewUser()
+            self.fullName = self.fullNameTextField.text!
+            self.phone = self.phoneTextField.text!
+            self.email = self.emailTextField.text!
+            self.password = self.passwordTextField.text!
+            self.checkEmailExist()
         }
     }
-    
     
 }
