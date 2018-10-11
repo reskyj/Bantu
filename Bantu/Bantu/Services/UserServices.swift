@@ -71,8 +71,9 @@ struct UserServices {
                             let fullName = singleUser["fullName"] as! String
                             let phone = singleUser["phone"] as! String
                             let email = singleUser["email"] as! String
+                            let password = singleUser["password"] as! String
                             
-                            let newUser = User(userId: userId!, levelId: levelId!, fullName: fullName, phone: phone, email: email, password: "")
+                            let newUser = User(userId: userId!, levelId: levelId!, fullName: fullName, phone: phone, email: email, password: password)
                             
                             tempUsers.append(newUser)
                         }
