@@ -160,6 +160,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <state key="normal" title="DAFTAR"/>
+                                <connections>
+                                    <action selector="registerButtonClicked" destination="YQf-qf-1b7" eventType="touchUpInside" id="CEn-7E-kqR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -187,6 +190,11 @@
                         <viewLayoutGuide key="safeArea" id="ydO-NB-RGo"/>
                     </view>
                     <connections>
+                        <outlet property="confirmPasswordTextField" destination="Uh0-2b-SLI" id="Siw-Tg-qZv"/>
+                        <outlet property="emailTextField" destination="ulz-eO-M0f" id="1pS-k3-aP0"/>
+                        <outlet property="fullNameTextField" destination="huL-ga-C9a" id="7kW-jh-BSa"/>
+                        <outlet property="passwordTextField" destination="3L4-8B-U8U" id="kn4-Uz-2V0"/>
+                        <outlet property="phoneTextField" destination="7bF-yo-pda" id="cyV-bv-4K7"/>
                         <outlet property="registerButton" destination="F8e-RR-Mha" id="wgj-Nx-7gJ"/>
                     </connections>
                 </viewController>

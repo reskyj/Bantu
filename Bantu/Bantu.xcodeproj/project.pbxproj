@@ -30,6 +30,7 @@
 		2FE953C9216B377800258F32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953C8216B377800258F32 /* HomeViewController.swift */; };
 		2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953CB216B45CA00258F32 /* HomeCell.swift */; };
 		2FE953CE216B46B400258F32 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953CD216B46B400258F32 /* Event.swift */; };
+		851747BD216E0A6700AD0041 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851747BC216E0A6700AD0041 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		2FE953CB216B45CA00258F32 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		2FE953CD216B46B400258F32 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		4B288977528F21EE08472445 /* Pods_Bantu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bantu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		851747BC216E0A6700AD0041 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		96FB6FFF3BDE33ED7269DF4B /* Pods-Bantu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bantu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bantu/Pods-Bantu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				851747BD216E0A6700AD0041 /* CoreLocation.framework in Frameworks */,
 				12BFBB2AF36CBED769B59D04 /* Pods_Bantu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +219,7 @@
 		DB900A0DE8F65251F8AD21B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				851747BC216E0A6700AD0041 /* CoreLocation.framework */,
 				4B288977528F21EE08472445 /* Pods_Bantu.framework */,
 			);
 			name = Frameworks;
