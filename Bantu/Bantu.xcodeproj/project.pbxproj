@@ -30,6 +30,11 @@
 		2FE953C9216B377800258F32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953C8216B377800258F32 /* HomeViewController.swift */; };
 		2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953CB216B45CA00258F32 /* HomeCell.swift */; };
 		2FE953CE216B46B400258F32 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953CD216B46B400258F32 /* Event.swift */; };
+		851747BD216E0A6700AD0041 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851747BC216E0A6700AD0041 /* CoreLocation.framework */; };
+		8529E008216EFC0B00879A98 /* GlobalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8529E007216EFC0B00879A98 /* GlobalModel.swift */; };
+		8529E00B216EFD3700879A98 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8529E00A216EFD3700879A98 /* UserServices.swift */; };
+		8529E00D216EFEC600879A98 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8529E00C216EFEC600879A98 /* User.swift */; };
+		8529E00F216F005500879A98 /* SHA1Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8529E00E216F005500879A98 /* SHA1Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +64,11 @@
 		2FE953CB216B45CA00258F32 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		2FE953CD216B46B400258F32 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		4B288977528F21EE08472445 /* Pods_Bantu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bantu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		851747BC216E0A6700AD0041 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8529E007216EFC0B00879A98 /* GlobalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalModel.swift; sourceTree = "<group>"; };
+		8529E00A216EFD3700879A98 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
+		8529E00C216EFEC600879A98 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8529E00E216F005500879A98 /* SHA1Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1Extension.swift; sourceTree = "<group>"; };
 		96FB6FFF3BDE33ED7269DF4B /* Pods-Bantu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bantu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bantu/Pods-Bantu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				851747BD216E0A6700AD0041 /* CoreLocation.framework in Frameworks */,
 				12BFBB2AF36CBED769B59D04 /* Pods_Bantu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				2F6FC31E21660912004609AC /* AppDelegate.swift */,
+				8529E009216EFD1B00879A98 /* Services */,
 				2FA5E32F216D939E00EB375C /* Model */,
 				2F6FC33621660D85004609AC /* View */,
 				2FE953CA216B379400258F32 /* Controller */,
@@ -122,6 +134,7 @@
 				2FA5E32C216B61B600EB375C /* PaddingTextField.swift */,
 				2FA5E330216D9D2200EB375C /* UIButton.swift */,
 				2FA5E343216DD83100EB375C /* UITextField.swift */,
+				8529E00E216F005500879A98 /* SHA1Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -132,6 +145,8 @@
 				2FE953CB216B45CA00258F32 /* HomeCell.swift */,
 				2FA1BA2C216DFE1700528619 /* DraftCell.swift */,
 				2FE953CD216B46B400258F32 /* Event.swift */,
+				8529E007216EFC0B00879A98 /* GlobalModel.swift */,
+				8529E00C216EFEC600879A98 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +219,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		8529E009216EFD1B00879A98 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8529E00A216EFD3700879A98 /* UserServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B6BAD9AC19A791E79023B5E3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +239,7 @@
 		DB900A0DE8F65251F8AD21B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				851747BC216E0A6700AD0041 /* CoreLocation.framework */,
 				4B288977528F21EE08472445 /* Pods_Bantu.framework */,
 			);
 			name = Frameworks;
@@ -319,15 +343,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8529E00B216EFD3700879A98 /* UserServices.swift in Sources */,
 				2FA5E338216DA01400EB375C /* AddDraftViewController.swift in Sources */,
 				2FA5E344216DD83100EB375C /* UITextField.swift in Sources */,
+				8529E008216EFC0B00879A98 /* GlobalModel.swift in Sources */,
 				2F6FC31F21660912004609AC /* AppDelegate.swift in Sources */,
 				2FA5E329216B593A00EB375C /* RegisterViewController.swift in Sources */,
 				2FA5E342216DCA0D00EB375C /* LogViewController.swift in Sources */,
+				8529E00D216EFEC600879A98 /* User.swift in Sources */,
 				2FA1BA2D216DFE1700528619 /* DraftCell.swift in Sources */,
 				2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */,
 				2FA1BA29216DFD7900528619 /* DraftViewController.swift in Sources */,
 				2FA5E331216D9D2200EB375C /* UIButton.swift in Sources */,
+				8529E00F216F005500879A98 /* SHA1Extension.swift in Sources */,
 				2FA5E32D216B61B600EB375C /* PaddingTextField.swift in Sources */,
 				2FA5E348216DE0C800EB375C /* LogInViewController.swift in Sources */,
 				2FE953C9216B377800258F32 /* HomeViewController.swift in Sources */,
