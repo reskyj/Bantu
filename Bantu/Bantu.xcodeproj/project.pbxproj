@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12BFBB2AF36CBED769B59D04 /* Pods_Bantu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B288977528F21EE08472445 /* Pods_Bantu.framework */; };
+		2F6B6208216F554D00BDC9A7 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6B6207216F554D00BDC9A7 /* DefaultViewController.swift */; };
 		2F6FC31F21660912004609AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6FC31E21660912004609AC /* AppDelegate.swift */; };
 		2F6FC32421660913004609AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F6FC32221660913004609AC /* Main.storyboard */; };
 		2F6FC32621660913004609AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6FC32521660913004609AC /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		1FB46D47F0CFC412CC1ED78B /* Pods-Bantu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bantu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bantu/Pods-Bantu.release.xcconfig"; sourceTree = "<group>"; };
+		2F6B6207216F554D00BDC9A7 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		2F6FC31B21660912004609AC /* Bantu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bantu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6FC31E21660912004609AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F6FC32321660913004609AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				2FA5E337216DA01400EB375C /* AddDraftViewController.swift */,
+				2F6B6207216F554D00BDC9A7 /* DefaultViewController.swift */,
 			);
 			name = AddDraft;
 			path = AddDraft/AddDraft;
@@ -356,6 +359,7 @@
 				8529E00D216EFEC600879A98 /* User.swift in Sources */,
 				8529E011216F4A9C00879A98 /* PostServices.swift in Sources */,
 				2FA1BA2D216DFE1700528619 /* DraftCell.swift in Sources */,
+				2F6B6208216F554D00BDC9A7 /* DefaultViewController.swift in Sources */,
 				2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */,
 				2FA1BA29216DFD7900528619 /* DraftViewController.swift in Sources */,
 				2FA5E331216D9D2200EB375C /* UIButton.swift in Sources */,

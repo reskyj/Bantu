@@ -14,9 +14,15 @@ class DraftViewController: UIViewController {
     
     var dates = ["10/11/2018", "10/12/2018"]
     var schoolNames = ["SDN 1 Gading Serpong", "SDN 222 Jakarta"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        AddDraft.selectedIndex = 2
     }
 }
 

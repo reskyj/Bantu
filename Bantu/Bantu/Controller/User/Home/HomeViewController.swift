@@ -29,6 +29,10 @@ class HomeViewController: UIViewController {
 //        self.present(activityController, animated: true, completion: nil)
 //    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        AddDraft.selectedIndex = 0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()

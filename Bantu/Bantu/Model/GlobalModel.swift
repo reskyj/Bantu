@@ -12,3 +12,8 @@ struct GlobalSession{
     static let session = URLSession(configuration: .default)
     static var rootUrl = "https://bantuapp.online/public"
 }
+
+struct AddDraft {
+    static var onDraft: Bool = false
+    static var selectedIndex: Int!
+}

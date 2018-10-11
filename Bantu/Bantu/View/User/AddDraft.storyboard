@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AdO-67-h2V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cyG-Zq-p0x">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Draft-->
+        <!--Add Draft View Controller-->
         <scene sceneID="sca-pr-JCr">
             <objects>
                 <viewController id="kmj-Hu-fei" customClass="AddDraftViewController" customModule="Bantu" customModuleProvider="target" sceneMemberID="viewController">
@@ -154,11 +154,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jN7-xS-UzF">
-                                                <rect key="frame" x="172" y="815" width="31" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Post"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GAMBAR JALAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVx-6O-pdC">
                                                 <rect key="frame" x="20" y="440" width="114" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -166,14 +161,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCP-OG-Y4x">
-                                                <rect key="frame" x="152" y="887" width="68" height="79"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="addDraftButton:" destination="kmj-Hu-fei" eventType="touchUpInside" id="iIT-oL-K0x"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
@@ -199,52 +186,54 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UqE-CA-Asi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="plus-1" id="rmM-55-UK6">
-                        <inset key="imageInsets" minX="0.0" minY="-37" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" title="Add Draft" id="VeW-01-ZAU"/>
+                    <navigationItem key="navigationItem" id="h29-Y5-nRB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="1100"/>
-                    <connections>
-                        <segue destination="cyG-Zq-p0x" kind="showDetail" identifier="toNewView" id="Ew2-HQ-IyW"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsp-Cn-MpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="150.73891625615764"/>
+            <point key="canvasLocation" x="4050.4000000000001" y="150.73891625615764"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="H6g-h4-oHq">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AdO-67-h2V" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="58F-rv-9pY">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="kmj-Hu-fei" kind="relationship" relationship="rootViewController" id="j4g-Wj-M7r"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GTm-qg-v31" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="181.59999999999999" y="153.69458128078819"/>
-        </scene>
-        <!--View Controller-->
+        <!--Default View Controller-->
         <scene sceneID="3vI-TS-0eZ">
             <objects>
-                <viewController id="cyG-Zq-p0x" sceneMemberID="viewController">
+                <viewController id="cyG-Zq-p0x" customClass="DefaultViewController" customModule="Bantu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PmE-1r-Ic3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rmU-Ih-Ph3"/>
                     </view>
+                    <tabBarItem key="tabBarItem" image="plus-1" id="Nn4-6h-Xuw">
+                        <inset key="imageInsets" minX="0.0" minY="-37" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="Mct-ab-MiU"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="8h3-Ua-7TC" kind="presentation" identifier="defaultSegue" id="UkN-ym-Bik"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChL-DH-FUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="1041"/>
+            <point key="canvasLocation" x="1986.4000000000001" y="150.73891625615764"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J6H-2s-ncf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8h3-Ua-7TC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M5a-d8-02Y">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kmj-Hu-fei" kind="relationship" relationship="rootViewController" id="xic-W3-3jf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVw-0E-nia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3108" y="150.73891625615764"/>
         </scene>
     </scenes>
     <resources>
