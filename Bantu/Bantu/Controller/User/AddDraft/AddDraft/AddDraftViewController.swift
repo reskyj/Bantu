@@ -12,11 +12,15 @@ class AddDraftViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func addDraftButton(_ sender: Any) {
+        performSegue(withIdentifier: "toNewView", sender: self, animated: )
+    }
+    
     /*
     // MARK: - Navigation
 

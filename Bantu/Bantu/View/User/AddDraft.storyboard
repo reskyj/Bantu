@@ -166,6 +166,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCP-OG-Y4x">
+                                                <rect key="frame" x="152" y="887" width="68" height="79"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="addDraftButton:" destination="kmj-Hu-fei" eventType="touchUpInside" id="iIT-oL-K0x"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
@@ -197,6 +205,9 @@
                     <navigationItem key="navigationItem" title="Add Draft" id="VeW-01-ZAU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="1100"/>
+                    <connections>
+                        <segue destination="cyG-Zq-p0x" kind="showDetail" identifier="toNewView" id="Ew2-HQ-IyW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsp-Cn-MpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,6 +230,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GTm-qg-v31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="181.59999999999999" y="153.69458128078819"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3vI-TS-0eZ">
+            <objects>
+                <viewController id="cyG-Zq-p0x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PmE-1r-Ic3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rmU-Ih-Ph3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ChL-DH-FUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094" y="1041"/>
         </scene>
     </scenes>
     <resources>
