@@ -16,4 +16,9 @@ struct GlobalSession{
 struct AddDraft {
     static var onDraft: Bool = false
     static var selectedIndex: Int!
+    static var needs: [Needs] = []
+    
+    static func getNeeds(){
+        
+    }
 }
