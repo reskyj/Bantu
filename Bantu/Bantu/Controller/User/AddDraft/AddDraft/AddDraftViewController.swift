@@ -10,12 +10,15 @@ import UIKit
 
 class AddDraftViewController: UIViewController {
     
+    
+    @IBOutlet weak var schoolNameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: .done, target: self, action: #selector(postButtonTapped))
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))
+        
         
     }
     
