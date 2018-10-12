@@ -45,6 +45,7 @@
 		853D1C57217059550071A60E /* Needs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C56217059550071A60E /* Needs.swift */; };
 		853D1C5A217059C30071A60E /* NeedsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C58217059C30071A60E /* NeedsEntity+CoreDataClass.swift */; };
 		853D1C5B217059C30071A60E /* NeedsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C59217059C30071A60E /* NeedsEntity+CoreDataProperties.swift */; };
+		853D1C5D21705D990071A60E /* NeedsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C5C21705D990071A60E /* NeedsServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		853D1C56217059550071A60E /* Needs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Needs.swift; sourceTree = "<group>"; };
 		853D1C58217059C30071A60E /* NeedsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		853D1C59217059C30071A60E /* NeedsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		853D1C5C21705D990071A60E /* NeedsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedsServices.swift; sourceTree = "<group>"; };
 		96FB6FFF3BDE33ED7269DF4B /* Pods-Bantu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bantu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bantu/Pods-Bantu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,6 +264,7 @@
 			children = (
 				8529E00A216EFD3700879A98 /* UserServices.swift */,
 				8529E010216F4A9C00879A98 /* PostServices.swift */,
+				853D1C5C21705D990071A60E /* NeedsServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				2FA1BA2D216DFE1700528619 /* DraftCell.swift in Sources */,
 				2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */,
 				853D1C5A217059C30071A60E /* NeedsEntity+CoreDataClass.swift in Sources */,
+				853D1C5D21705D990071A60E /* NeedsServices.swift in Sources */,
 				2FA1BA29216DFD7900528619 /* DraftViewController.swift in Sources */,
 				2FA5E331216D9D2200EB375C /* UIButton.swift in Sources */,
 				8529E00F216F005500879A98 /* SHA1Extension.swift in Sources */,

@@ -276,9 +276,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="esl-iA-22O"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="plus-1" id="ziM-Ff-Snx">
-                        <inset key="imageInsets" minX="0.0" minY="-37" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Add Draft" id="0cM-qD-DDS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="1100"/>
@@ -290,6 +287,5 @@
     </scenes>
     <resources>
         <image name="draft-2" width="18.75" height="18.75"/>
-        <image name="plus-1" width="72" height="72"/>
     </resources>
 </document>
