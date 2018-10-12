@@ -49,7 +49,12 @@ class LogInViewController: UIViewController {
                         if (user.password == hashedPassword){
                             DispatchQueue.main.async {
                                 self.createOkAlert(title: "Berhasil", message: "Anda telah masuk!"){
-                                    // to profile page
+                                    if (user.levelId == 2){
+                                        // to profile page
+                                    }
+                                    else{
+                                        // segue to admin storyboard reference
+                                    }
                                 }
                             }
                         }
