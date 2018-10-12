@@ -30,8 +30,9 @@ class Post{
     
     var schoolImages: [UIImage]
     var roadImages: [UIImage]
+    var needs: [Needs]
     
-    init(postId: Int, userId: Int, statusId: Int, timeStamp: String, schoolName: String, about: String, studentNo: Int, teacherNo: Int, address: String, access: String, notes: String, locationAOI: String, locationName: String, locationLocality: String, locationAdminArea: String, locationLatitude: Double, locationLongitude: Double, schoolImages: [UIImage], roadImages: [UIImage]) {
+    init(postId: Int, userId: Int, statusId: Int, timeStamp: String, schoolName: String, about: String, studentNo: Int, teacherNo: Int, address: String, access: String, notes: String, locationAOI: String, locationName: String, locationLocality: String, locationAdminArea: String, locationLatitude: Double, locationLongitude: Double, schoolImages: [UIImage], roadImages: [UIImage], needs: [Needs]) {
         
         self.postId = postId
         self.userId = userId
@@ -53,7 +54,7 @@ class Post{
         
         self.schoolImages = schoolImages
         self.roadImages = roadImages
-        
+        self.needs = needs
     }
     
     

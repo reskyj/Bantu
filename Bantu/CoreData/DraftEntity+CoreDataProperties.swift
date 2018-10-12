@@ -2,7 +2,7 @@
 //  DraftEntity+CoreDataProperties.swift
 //  
 //
-//  Created by Gior Fasolini on 11/10/18.
+//  Created by Steven Muliamin on 12/10/18.
 //
 //
 
@@ -25,11 +25,12 @@ extension DraftEntity {
     @NSManaged public var locationLocality: String?
     @NSManaged public var locationLongitude: Double
     @NSManaged public var locationName: String?
-    @NSManaged public var needsPost: String?
+    @NSManaged public var needsPost: NSData?
     @NSManaged public var notesPost: String?
     @NSManaged public var postUUID: String?
     @NSManaged public var roadImages: NSData?
     @NSManaged public var schoolImages: NSData?
     @NSManaged public var schoolName: String?
+    @NSManaged public var timeStamp: NSDate?
 
 }

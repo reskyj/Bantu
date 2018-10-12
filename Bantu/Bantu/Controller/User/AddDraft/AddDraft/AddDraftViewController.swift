@@ -9,12 +9,7 @@
 import UIKit
 
 class AddDraftViewController: UIViewController {
-
-    @IBOutlet weak var postButton: UIBarButtonItem!
     
-    @IBAction func cancelButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +27,5 @@ class AddDraftViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func addDraftButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "toNewView", sender: nil)
-    }
+
 }
