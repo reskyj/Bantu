@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DraftViewController: UIViewController {
 
@@ -24,6 +25,7 @@ class DraftViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         AddDraft.selectedIndex = 2
     }
+    
 }
 
 extension DraftViewController: UITableViewDataSource, UITableViewDelegate {
@@ -38,6 +40,7 @@ extension DraftViewController: UITableViewDataSource, UITableViewDelegate {
         draftCell.schoolNameLabel.text = schoolNames[indexPath.row]
         draftCell.accessoryType = .disclosureIndicator
         
+        print("Successfully load draft")
         return draftCell
     }
     

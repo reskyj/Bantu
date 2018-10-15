@@ -44,11 +44,21 @@ class RegisteringViewController: UIViewController {
         
         UserServices.postUser(newUser: newUser) { (inserted) in
             if (inserted == true){
-                DispatchQueue.main.async {
-                    self.createOkAlert(title: "Berhasil", message: "Akun anda sudah terdaftar di Bantu!"){
-                        // go back to profile page
+                UserServices.getUsers() { (users) in
+                    for singleUser in users{
+                        if (singleUser.email == self.email){
+                            GlobalSession.loggedInUser = singleUser
+                            GlobalSession.isLoggedIn = true
+                            DispatchQueue.main.async {
+                                self.createOkAlert(title: "Berhasil", message: "Akun anda sudah terdaftar di Bantu!"){
+                                    // go back to profile page
+                                    self.navigationController?.popViewController(animated: true)
+                                }
+                            }
+                        }
                     }
                 }
+                
             }
             else{
                 DispatchQueue.main.async {

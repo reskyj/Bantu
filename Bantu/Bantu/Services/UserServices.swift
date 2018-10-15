@@ -86,4 +86,9 @@ struct UserServices {
         }
         dataTask.resume()
     }
+    
+    static func getUserByEmail(){
+        
+    }
+    
 }
