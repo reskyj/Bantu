@@ -11,6 +11,10 @@
 		296BE554216F5CD7006A6B88 /* LocalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 296BE552216F5CD7006A6B88 /* LocalModel.xcdatamodeld */; };
 		296BE57E216F60E0006A6B88 /* LocalServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296BE57D216F60E0006A6B88 /* LocalServices.swift */; };
 		296E268C2170B0D3002EEAEB /* imagesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296E268B2170B0D3002EEAEB /* imagesCollectionCell.swift */; };
+		29BBC6B3217443D7007FCF81 /* NeedsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BBC6AF217443D7007FCF81 /* NeedsEntity+CoreDataClass.swift */; };
+		29BBC6B4217443D7007FCF81 /* DraftEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BBC6B0217443D7007FCF81 /* DraftEntity+CoreDataClass.swift */; };
+		29BBC6B5217443D7007FCF81 /* NeedsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BBC6B1217443D7007FCF81 /* NeedsEntity+CoreDataProperties.swift */; };
+		29BBC6B6217443D7007FCF81 /* DraftEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BBC6B2217443D7007FCF81 /* DraftEntity+CoreDataProperties.swift */; };
 		29D90F6F2171B45E003C7D61 /* needsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D90F6E2171B45E003C7D61 /* needsCollectionCell.swift */; };
 		2F6B620A216F639900BDC9A7 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6B6209216F639900BDC9A7 /* DefaultViewController.swift */; };
 		2F6FC31F21660912004609AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6FC31E21660912004609AC /* AppDelegate.swift */; };
@@ -55,6 +59,10 @@
 		296BE553216F5CD7006A6B88 /* LocalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalModel.xcdatamodel; sourceTree = "<group>"; };
 		296BE57D216F60E0006A6B88 /* LocalServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalServices.swift; sourceTree = "<group>"; };
 		296E268B2170B0D3002EEAEB /* imagesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagesCollectionCell.swift; sourceTree = "<group>"; };
+		29BBC6AF217443D7007FCF81 /* NeedsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		29BBC6B0217443D7007FCF81 /* DraftEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DraftEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		29BBC6B1217443D7007FCF81 /* NeedsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		29BBC6B2217443D7007FCF81 /* DraftEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DraftEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		29D90F6E2171B45E003C7D61 /* needsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = needsCollectionCell.swift; sourceTree = "<group>"; };
 		2F6B6209216F639900BDC9A7 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		2F6FC31B21660912004609AC /* Bantu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bantu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +124,10 @@
 		296BE551216F5CB0006A6B88 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				29BBC6AF217443D7007FCF81 /* NeedsEntity+CoreDataClass.swift */,
+				29BBC6B1217443D7007FCF81 /* NeedsEntity+CoreDataProperties.swift */,
+				29BBC6B0217443D7007FCF81 /* DraftEntity+CoreDataClass.swift */,
+				29BBC6B2217443D7007FCF81 /* DraftEntity+CoreDataProperties.swift */,
 				296BE552216F5CD7006A6B88 /* LocalModel.xcdatamodeld */,
 				296BE57D216F60E0006A6B88 /* LocalServices.swift */,
 			);
@@ -427,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BBC6B5217443D7007FCF81 /* NeedsEntity+CoreDataProperties.swift in Sources */,
 				8529E00B216EFD3700879A98 /* UserServices.swift in Sources */,
 				2FA5E338216DA01400EB375C /* AddDraftViewController.swift in Sources */,
 				2FA5E344216DD83100EB375C /* UITextField.swift in Sources */,
@@ -437,11 +450,14 @@
 				2FA5E329216B593A00EB375C /* RegisterViewController.swift in Sources */,
 				296E268C2170B0D3002EEAEB /* imagesCollectionCell.swift in Sources */,
 				2FA5E342216DCA0D00EB375C /* LogViewController.swift in Sources */,
+				29BBC6B6217443D7007FCF81 /* DraftEntity+CoreDataProperties.swift in Sources */,
+				29BBC6B3217443D7007FCF81 /* NeedsEntity+CoreDataClass.swift in Sources */,
 				2F719DA52170A249009C83A4 /* AddEventViewController.swift in Sources */,
 				8529E00D216EFEC600879A98 /* User.swift in Sources */,
 				8529E011216F4A9C00879A98 /* PostServices.swift in Sources */,
 				2F719D9C21709E73009C83A4 /* SubmissionDetailViewController.swift in Sources */,
 				2FA1BA2D216DFE1700528619 /* DraftCell.swift in Sources */,
+				29BBC6B4217443D7007FCF81 /* DraftEntity+CoreDataClass.swift in Sources */,
 				2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */,
 				853D1C5D21705D990071A60E /* NeedsServices.swift in Sources */,
 				2FA1BA29216DFD7900528619 /* DraftViewController.swift in Sources */,
