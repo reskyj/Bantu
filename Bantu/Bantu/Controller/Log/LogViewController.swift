@@ -21,8 +21,12 @@ class LogViewController: UIViewController {
         super.viewDidLoad()
         self.registerButton.buttonDesign()
         self.signInButton.buttonSecondDesign()
-        
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if (GlobalSession.isLoggedIn == true){
+            // go to profile page
+        }
     }
     
     @IBAction func registerButtonTapped(_ sender: Any) {

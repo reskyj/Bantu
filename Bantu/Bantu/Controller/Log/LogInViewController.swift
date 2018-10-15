@@ -44,13 +44,16 @@ class LogInViewController: UIViewController {
         }
         else{
             UserServices.getUsers { (users) in
-                for user in users{
-                    if (user.email == self.email){
-                        if (user.password == hashedPassword){
+                for singleUser in users{
+                    if (singleUser.email == self.email){
+                        if (singleUser.password == hashedPassword){
                             DispatchQueue.main.async {
                                 self.createOkAlert(title: "Berhasil", message: "Anda telah masuk!"){
-                                    if (user.levelId == 2){
+                                    if (singleUser.levelId == 2){
                                         // to profile page
+                                        GlobalSession.isLoggedIn = true
+                                        GlobalSession.loggedInUser = singleUser
+                                        self.navigationController?.popViewController(animated: true)
                                     }
                                     else{
                                         // segue to admin storyboard reference
